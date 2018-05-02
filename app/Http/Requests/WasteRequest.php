@@ -27,8 +27,8 @@ class WasteRequest extends Request
             'location'=>'required',
             'name'=>'required',
             'phone'=>'required',
-            'organizatin'=>'required',
-            'email'=>'required'
+            'organization'=>'required',
+            'email'=>'required|email'
 
         ];
     }
