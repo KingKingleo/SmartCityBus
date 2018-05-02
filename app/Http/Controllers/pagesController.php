@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Request;
+use App\Http\Requests\WasteRequest;
+
 use App\Waster;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -36,9 +38,11 @@ class pagesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(WasteRequest $request)
     {
-        //
+        $input = Request::all();
+        Waster::create($input);
+        return redirect('pages');
     }
 
     /**

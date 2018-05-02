@@ -28,6 +28,15 @@
 	@yield('display')
 	@yield('form1')
 </div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			@yield('formstyle')
+		</div>
+		<div class="md-md-2"></div>
+	</div>
+</div>
 
 </body>
 </html>
