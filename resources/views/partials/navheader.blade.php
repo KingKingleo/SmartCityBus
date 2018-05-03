@@ -10,6 +10,15 @@
 			<li><a href="#">CallPicker</a></li>
 			<li><a href="{{ route('pages.create') }}">WastePicker</a></li>
 		</ul>
+		<ul class="nav navbar-nav">
+		@if(Auth::check())
+		<li>{{ Auth::user()->name() }}</li>
+			<li><a href="{{ route('logout')}}">login</a>log-out</li>
+			@else
+			<li><a href="{{ route('login')}}">login</a></li>
+			<li><a href="{{ route('register') }}">register</a></li>
+			@endif
+		</ul>
 	</div>
 	</article>
 </nav>
